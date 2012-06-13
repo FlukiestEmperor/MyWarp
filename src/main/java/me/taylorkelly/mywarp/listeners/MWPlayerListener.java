@@ -33,6 +33,7 @@ public class MWPlayerListener implements Listener
 		if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
 			Block block = event.getClickedBlock();
 			if (((block.getState() instanceof Sign)) && (SignWarp.isSignWarp((Sign)block.getState())) && (WarpPermissions.signWarp(event.getPlayer())))
+			  //github test
 				SignWarp.warpSign((Sign)block.getState(), this.warpList, event.getPlayer());
 		}
 	}
