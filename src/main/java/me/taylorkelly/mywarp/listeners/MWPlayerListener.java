@@ -27,18 +27,20 @@ public class MWPlayerListener implements Listener
 		this.warpList = warpList;
 	}
 
-	@EventHandler(priority = EventPriority.MONITOR)
+	@EventHandler(priority = EventPriority.NORMAL)
 	public void onPlayerInteract(PlayerInteractEvent event)
 	{
 		if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
 			Block block = event.getClickedBlock();
 			if (((block.getState() instanceof Sign)) && (SignWarp.isSignWarp((Sign)block.getState())) && (WarpPermissions.signWarp(event.getPlayer())))
-			  //github test
+			{
+			  event.setCancelled(true);
 				SignWarp.warpSign((Sign)block.getState(), this.warpList, event.getPlayer());
+			}
 		}
 	}
 
-	@EventHandler(priority = EventPriority.MONITOR)
+	@EventHandler(priority = EventPriority.NORMAL)
 	public void onPlayerChat(PlayerChatEvent event)
 	{
 		Player player = event.getPlayer();
@@ -49,7 +51,7 @@ public class MWPlayerListener implements Listener
 		}
 	}
 
-	@EventHandler(priority = EventPriority.MONITOR)
+	@EventHandler(priority = EventPriority.NORMAL)
 	public void onPlayerTeleport(PlayerTeleportEvent event) {
 		if(WarpSettings.loadChunks) {
 			World world = event.getPlayer().getWorld();

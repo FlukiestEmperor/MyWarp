@@ -30,7 +30,7 @@ public class SignWarp {
                 lines.add(sign.getLine(i).trim());
             }
         }
-        if(lines.size() == 2 && lines.get(0).equalsIgnoreCase("MyWarp")) {
+        if(lines.size() == 2 && lines.get(1).equalsIgnoreCase("[MyWarp]")) {
             return true;
         } else {
             return false;
@@ -44,7 +44,7 @@ public class SignWarp {
                 lines.add(sign.getLine(i).trim());
             }
         }
-        if(lines.size() == 2 && lines.get(0).equalsIgnoreCase("MyWarp")) {
+        if(lines.size() == 2 && lines.get(1).equalsIgnoreCase("[MyWarp]")) {
             return true;
         } else {
             return false;

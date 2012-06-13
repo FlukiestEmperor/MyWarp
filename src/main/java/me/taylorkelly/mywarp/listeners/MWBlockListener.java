@@ -17,7 +17,7 @@ public class MWBlockListener implements Listener
   {
   }
 
-  @EventHandler(priority = EventPriority.MONITOR)
+  @EventHandler(priority = EventPriority.NORMAL)
   public void onSignChange(SignChangeEvent event)
   {
     Player player = event.getPlayer();
