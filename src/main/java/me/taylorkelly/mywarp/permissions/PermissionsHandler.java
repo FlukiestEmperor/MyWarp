@@ -43,6 +43,7 @@ public class PermissionsHandler implements IPermissionsHandler {
 			return;
 		}
 
+		/*
 		final Plugin bPermPlugin = pluginManager.getPlugin("bPermissions");
 		if (bPermPlugin != null && bPermPlugin.isEnabled()) {
 			if (bPermPlugin.getDescription().getVersion().charAt(0) == '2') {
@@ -52,7 +53,8 @@ public class PermissionsHandler implements IPermissionsHandler {
 					WarpLogger.info("Access Control: Using bPermissions"+ version);
 					handler = new BPermissions2Handler();
 				}
-			} else {
+			} 
+			else {
 				if (!(handler instanceof BPermissionsHandler)) {
 					permplugin = PermHandler.BPERMISSIONS;
 					String version = bPermPlugin.getDescription().getVersion();
@@ -62,8 +64,11 @@ public class PermissionsHandler implements IPermissionsHandler {
 			}
 			return;
 		}
+		*/
 
 
+
+		/*
 		final Plugin GMplugin = pluginManager.getPlugin("GroupManager");
 		if (GMplugin != null && GMplugin.isEnabled()) {
 			if (!(handler instanceof GroupManagerHandler)) {
@@ -74,7 +79,9 @@ public class PermissionsHandler implements IPermissionsHandler {
 			}
 			return;
 		}
+		*/
 
+		/*
 		final Plugin permPlugin = pluginManager.getPlugin("Permissions");
 		if (permPlugin != null && permPlugin.isEnabled()) {
 			if (permPlugin.getDescription().getVersion().charAt(0) == '3') {
@@ -94,6 +101,7 @@ public class PermissionsHandler implements IPermissionsHandler {
 			}
 			return;
 		}
+		*/
 
 		if (permplugin == PermHandler.NONE) {
 			if (!(handler instanceof SuperpermsHandler)) {

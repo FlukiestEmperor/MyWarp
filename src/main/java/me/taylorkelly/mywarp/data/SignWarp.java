@@ -15,22 +15,18 @@ public class SignWarp {
     public static void warpSign(Sign sign, WarpList list, Player player) {
         ArrayList<String> lines = new ArrayList<String>();
         for(int i = 0; i < 4; i++){
-            if(!sign.getLine(i).trim().equals("")) {
-                lines.add(sign.getLine(i).trim());
-            }
+          lines.add(sign.getLine(i));
         }
-        String name = lines.get(1);
+        String name = lines.get(2);
         list.warpTo(name, player);
     }
 
     public static boolean isSignWarp(Sign sign) {
         ArrayList<String> lines = new ArrayList<String>();
         for(int i = 0; i < 4; i++){
-            if(!sign.getLine(i).trim().equals("")) {
-                lines.add(sign.getLine(i).trim());
-            }
+          lines.add(sign.getLine(i));
         }
-        if(lines.size() == 2 && lines.get(1).equalsIgnoreCase("[MyWarp]")) {
+        if(lines.get(1).equalsIgnoreCase("[MyWarp]")) {
             return true;
         } else {
             return false;
@@ -40,11 +36,9 @@ public class SignWarp {
     public static boolean isSignWarp(SignChangeEvent sign) {
         ArrayList<String> lines = new ArrayList<String>();
         for(int i = 0; i < 4; i++){
-            if(!sign.getLine(i).trim().equals("")) {
-                lines.add(sign.getLine(i).trim());
-            }
+          lines.add(sign.getLine(i));
         }
-        if(lines.size() == 2 && lines.get(1).equalsIgnoreCase("[MyWarp]")) {
+        if(lines.get(1).equalsIgnoreCase("[MyWarp]")) {
             return true;
         } else {
             return false;

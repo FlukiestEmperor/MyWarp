@@ -1,9 +1,9 @@
 package me.taylorkelly.mywarp;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+//import java.io.File;
+//import java.io.FileInputStream;
+//import java.io.FileOutputStream;
+//import java.io.IOException;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -24,9 +24,9 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Event;
-import org.bukkit.event.Event.Priority;
-import org.bukkit.event.Event.Type;
+//import org.bukkit.event.Event;
+//import org.bukkit.event.Event.Priority;
+//import org.bukkit.event.Event.Type;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -96,7 +96,8 @@ public class MyWarp extends JavaPlugin {
         } 
         return true;
     }
-    
+   
+    /*
     private void updateFiles(File oldDatabase, File newDatabase) {
         if (!getDataFolder().exists()) {
             getDataFolder().mkdirs();
@@ -111,12 +112,14 @@ public class MyWarp extends JavaPlugin {
         }
         copyFile(oldDatabase, newDatabase);
     }
+    */
 
     /**
      * File copier from xZise
      * @param fromFile
      * @param toFile
      */
+    /*
     private static void copyFile(File fromFile, File toFile) {
         FileInputStream from = null;
         FileOutputStream to = null;
@@ -146,8 +149,9 @@ public class MyWarp extends JavaPlugin {
             }
         }
     }
+    */
     
-    private boolean warning;
+    //private boolean warning;
 
     public boolean onCommand(CommandSender sender, Command command, String commandLabel, String[] args) {
         String[] split = args;
